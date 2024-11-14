@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home - Menendez Luxury Cars
+{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Menendez Luxury Car Store</h1>
+
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <!-- Стоковое видео на повторе -->
+            <video class="d-block mx-lg-auto img-fluid" autoplay loop muted playsinline width="700" height="500">
+                <source src="static/videos/car (1).mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Find Your Dream Luxury Car</h1>
+            <p class="lead">At Menendez Luxury Cars, we offer a curated selection of high-end automobiles for the discerning buyer. Explore our collection of the finest luxury cars, carefully chosen for their design, performance, and prestige.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="/cars" class="btn btn-primary btn-lg px-4 me-md-2">Browse Our Cars</a>
+                <a href="/contact" class="btn btn-outline-secondary btn-lg px-4">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

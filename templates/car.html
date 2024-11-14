@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ car.name }} - Menendez Luxury Cars
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="text-center text-primary mb-4">{{ car.name }}</h1>
+
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <!-- Изображение автомобиля -->
+            <img src="{{ car.image_url }}" alt="{{ car.name }}" class="img-fluid rounded shadow-lg">
+        </div>
+        <div class="col-lg-6">
+            <h2 class="display-6 mb-4">About This Car</h2>
+            <p class="lead">{{ car.description }}</p>
+            <p class="h4 text-success">Price: ${{ car.price }}</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="/cart" class="btn btn-warning btn-lg px-4">Add to Cart</a>
+                <a href="/contact" class="btn btn-outline-secondary btn-lg px-4">Contact for Inquiry</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="/" class="btn btn-primary btn-lg">Back to Cars</a>
+    </div>
+</div>
+{% endblock %}

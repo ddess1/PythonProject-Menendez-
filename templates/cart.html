@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+Cart - Menendez Luxury Cars
+{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh; background-color: #2C2C2C;">
+    <div class="card" style="width: 100%; max-width: 800px; border-radius: 10px;">
+        <div class="card-body">
+            <h2 class="text-center text-white mb-4">Your Cart</h2>
+
+            <!-- Список добавленных автомобилей в корзину -->
+            <div class="cart-items mb-4">
+                <div class="cart-item d-flex justify-content-between align-items-center mb-3">
+                    <div class="d-flex align-items-center">
+                        <img src="static/images/lamborghini.jpg" alt="Car" class="img-fluid" style="width: 80px; height: 50px; object-fit: cover; margin-right: 10px;">
+                        <span class="text-white">Lamborghini Countach</span>
+                    </div>
+                    <span class="text-white">$350,000</span>
+                </div>
+                <div class="cart-item d-flex justify-content-between align-items-center mb-3">
+                    <div class="d-flex align-items-center">
+                        <img src="static/images/porsche_gt3.jpg" alt="Car" class="img-fluid" style="width: 80px; height: 50px; object-fit: cover; margin-right: 10px;">
+                        <span class="text-white">Porsche GT3 RS</span>
+                    </div>
+                    <span class="text-white">$150,000</span>
+                </div>
+                <!-- Здесь можно добавить больше автомобилей -->
+            </div>
+
+            <!-- Итоговая стоимость и кнопки -->
+            <div class="total d-flex justify-content-between mb-4">
+                <span class="text-white">Total:</span>
+                <span class="text-white">$500,000</span>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button class="btn btn-success" type="button">Proceed to Checkout</button>
+                <button class="btn btn-outline-secondary" type="button">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
